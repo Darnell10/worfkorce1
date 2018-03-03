@@ -21,7 +21,7 @@ public class JobsViewHolder extends RecyclerView.ViewHolder {
     TextView tv3;
     //public Button saveBtn;
     //public Button applyBtn;
-    public LinearLayout linearLayout;
+
 
     public JobsViewHolder(View itemView) {
         super(itemView);
@@ -31,11 +31,12 @@ public class JobsViewHolder extends RecyclerView.ViewHolder {
         tv3 = itemView.findViewById(R.id.git_jobs_location_text_view);
         //saveBtn = itemView.findViewById(R.id.save_btn);
         //applyBtn = itemView.findViewById(R.id.apply_btn);
-        linearLayout = itemView.findViewById(R.id.job_item_layout);
+
     }
     public void onBind(Job job) {
         tv1.setText(job.getPositionTitle());
         tv2.setText(job.getPositionType());
+        tv3.setText(job.getBorough());
 
     }
 }
