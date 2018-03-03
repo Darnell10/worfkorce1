@@ -124,4 +124,16 @@ public class Event {
         }
         return date;
     }
+
+    private String dateToString(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("E, M d, y");
+        String sdt = formatter.format(date);
+        return sdt;
+    }
+
+    private String hourToString(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("h:m a");        String sdt = formatter.format(date);
+        return sdt;
+
+    }
 }
