@@ -1,5 +1,9 @@
 package nyc.c4q.workforce1.model;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -8,26 +12,32 @@ import java.util.Date;
 
 public class Event {
 
-    String borough;
-    Date checkInFrom;
-    Date checkInTo;
-    String companyNameOrType;
-    Date eventDate;
-    String eventTitle;
-    String location;
-    String locationNameAndAddress;
-    String qualifications;
+    private String borough;
+    @SerializedName("check_in_from)")
+    private String checkInFrom;
+    @SerializedName("check_in_from")
+    private String  checkInTo;
+    @SerializedName("company_name_or_type")
+    private String companyNameOrType;
+    @SerializedName("event_date")
+    private String eventDate;
+    @SerializedName("event_title")
+    private String eventTitle;
+    private String location;
+    @SerializedName("location_name_and_address")
+    private String locationNameAndAddress;
+    private String qualifications;
 
     public String getBorough() {
         return borough;
     }
 
     public Date getCheckInFrom() {
-        return checkInFrom;
+        return fromHourStringToDate(checkInFrom);
     }
 
     public Date getCheckInTo() {
-        return checkInTo;
+        return fromHourStringToDate(checkInTo);
     }
 
     public String getCompanyNameOrType() {
@@ -35,7 +45,7 @@ public class Event {
     }
 
     public Date getEventDate() {
-        return eventDate;
+        return fromDateStringToDate(eventDate);
     }
 
     public String getEventTitle() {
@@ -58,11 +68,11 @@ public class Event {
         this.borough = borough;
     }
 
-    public void setCheckInFrom(Date checkInFrom) {
+    public void setCheckInFrom(String checkInFrom) {
         this.checkInFrom = checkInFrom;
     }
 
-    public void setCheckInTo(Date checkInTo) {
+    public void setCheckInTo(String checkInTo) {
         this.checkInTo = checkInTo;
     }
 
@@ -70,7 +80,7 @@ public class Event {
         this.companyNameOrType = companyNameOrType;
     }
 
-    public void setEventDate(Date eventDate) {
+    public void setEventDate(String eventDate) {
         this.eventDate = eventDate;
     }
 
@@ -88,5 +98,30 @@ public class Event {
 
     public void setQualifications(String qualifications) {
         this.qualifications = qualifications;
+    }
+
+    private Date fromHourStringToDate(String s) {
+        SimpleDateFormat format = new SimpleDateFormat("h:m a");
+        Date date = null;
+        try {
+            date = format.parse(s);
+            System.out.println(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+    private Date fromDateStringToDate(String s){
+        //"Tuesday, February 27, 2018"
+        SimpleDateFormat format = new SimpleDateFormat("E, M d, y");
+        Date date = null;
+        try {
+            date = format.parse(s);
+            System.out.println(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
     }
 }

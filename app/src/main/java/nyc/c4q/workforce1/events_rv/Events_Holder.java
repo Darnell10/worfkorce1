@@ -10,6 +10,7 @@ import org.w3c.dom.Text;
 import java.util.Date;
 
 import nyc.c4q.workforce1.R;
+import nyc.c4q.workforce1.model.Event;
 
 import static nyc.c4q.workforce1.R.*;
 
@@ -29,8 +30,6 @@ public class Events_Holder extends RecyclerView.ViewHolder {
     private TextView qualifications;
 
 
-
-
     public Events_Holder(View itemView) {
         super(itemView);
 
@@ -45,9 +44,16 @@ public class Events_Holder extends RecyclerView.ViewHolder {
 
     }
 
-    public void onBind(){
+    public void onBind(Event event) {
+        Event thisEvent = event;
 
-
+        borough.setText(thisEvent.getBorough());
+        checkin_to.setText((CharSequence) thisEvent.getCheckInTo());
+        checkin_from.setText((CharSequence) thisEvent.getCheckInFrom());
+        eventTitle.setText(thisEvent.getEventTitle());
+        location.setText(thisEvent.getLocation());
+        address.setText(thisEvent.getLocationNameAndAddress());
+        qualifications.setText(thisEvent.getQualifications());
 
 
     }
