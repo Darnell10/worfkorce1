@@ -21,7 +21,7 @@ import nyc.c4q.workforce1.model.DummyData;
  * A simple {@link Fragment} subclass.
  */
 public class JobsDetailFragment extends Fragment {
-    TextView company, title, location, type, description, maxWage, minWage, maxHour, minHour, experience, requirement, rate,;
+    TextView company, title, location, type, description, maxWage, minWage, maxHour, minHour, experience, requirement, rate;
     Button url;
     ImageView logo;
     String job_id;
