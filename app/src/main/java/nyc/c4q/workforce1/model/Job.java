@@ -8,7 +8,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class Job {
 
-
     @SerializedName("boroughbronx")
     private String boroughBronx;
     @SerializedName("boroughbrooklyn")
