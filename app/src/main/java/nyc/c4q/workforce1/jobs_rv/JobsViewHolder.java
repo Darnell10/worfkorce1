@@ -36,5 +36,6 @@ public class JobsViewHolder extends RecyclerView.ViewHolder {
     public void onBind(Job job) {
         tv1.setText(job.getPositionTitle());
         tv2.setText(job.getPositionType());
+
     }
 }
