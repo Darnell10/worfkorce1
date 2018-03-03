@@ -39,10 +39,10 @@ public class EventsHolder extends RecyclerView.ViewHolder {
         checkin_to = itemView.findViewById(id.checkin_to);
         checkin_from = itemView.findViewById(R.id.checkin_from);
         eventTitle = itemView.findViewById(R.id.event_title);
-
-        location = itemView.findViewById(id.location);
-        address = itemView.findViewById(id.address);
-        qualifications = itemView.findViewById(id.qualification);
+        eventDate = itemView.findViewById(R.id.event_date);
+        location = itemView.findViewById(R.id.location);
+        address = itemView.findViewById(R.id.address);
+        qualifications = itemView.findViewById(R.id.qualification);
 
     }
 
