@@ -1,5 +1,7 @@
 package nyc.c4q.workforce1.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Date;
 
 /**
@@ -8,15 +10,21 @@ import java.util.Date;
 
 public class Event {
 
-    String borough;
-    Date checkInFrom;
-    Date checkInTo;
-    String companyNameOrType;
-    Date eventDate;
-    String eventTitle;
-    String location;
-    String locationNameAndAddress;
-    String qualifications;
+    private String borough;
+    @SerializedName("check_in_from)")
+    private Date checkInFrom;
+    @SerializedName("check_in_from")
+    private Date checkInTo;
+    @SerializedName("company_name_or_type")
+    private String companyNameOrType;
+    @SerializedName("event_date")
+    private Date eventDate;
+    @SerializedName("event_title")
+    private String eventTitle;
+    private String location;
+    @SerializedName("location_name_and_address")
+    private String locationNameAndAddress;
+    private String qualifications;
 
     public String getBorough() {
         return borough;

@@ -1,28 +1,48 @@
 package nyc.c4q.workforce1.model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Shant on 3/3/2018.
  */
 
 public class Job {
 
-    String boroughBronx;
-    String boroughBrooklyn;
-    String boroughManhattan;
-    String boroughNonNyc;
-    String boroughQueens;
-    String boroughStatenIsland;
-    String candidateExperienceQualificationSkills;
-    String educationRequired;
-    String hourlyAnnual;
-    int maxHoursPerWeek;
-    int minHoursPerWeek;
-    String positionDescritption;
-    String positionTitle;
-    String positionType;
-    String sectorName;
-    Double wageMax;
-    Double wageMin;
+
+    @SerializedName("boroughbronx")
+    private String boroughBronx;
+    @SerializedName("boroughbrooklyn")
+    private String boroughBrooklyn;
+    @SerializedName("boroughmanhattan")
+    private String boroughManhattan;
+    @SerializedName("boroughnonnyc")
+    private String boroughNonNyc;
+    @SerializedName("boroughqueens")
+    private String boroughQueens;
+    @SerializedName("boroughstatenisland")
+    private String boroughStatenIsland;
+    @SerializedName("candidateexperiencequalificationskills")
+    private String candidateExperienceQualificationSkills;
+    @SerializedName("educationrequired")
+    private String educationRequired;
+    @SerializedName("hourlyannual")
+    private String hourlyAnnual;
+    @SerializedName("maxhoursperweek")
+    private int maxHoursPerWeek;
+    @SerializedName("minhoursperweek")
+    private int minHoursPerWeek;
+    @SerializedName("positiondescritption")
+    private String positionDescritption;
+    @SerializedName("positiontitle")
+    private String positionTitle;
+    @SerializedName("positiontype")
+    private String positionType;
+    @SerializedName("sectorname")
+    private String sectorName;
+    @SerializedName("wagemax")
+    private Double wageMax;
+    @SerializedName("wagemin")
+    private Double wageMin;
 
     public boolean getBoroughBronx() {
         return yesNoToBoolean(boroughBronx);
