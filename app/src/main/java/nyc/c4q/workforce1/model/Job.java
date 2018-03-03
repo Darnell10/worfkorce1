@@ -5,4 +5,7 @@ package nyc.c4q.workforce1.model;
  */
 
 public class Job {
+
+
+
 }
