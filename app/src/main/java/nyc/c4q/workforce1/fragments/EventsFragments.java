@@ -13,6 +13,7 @@ import java.util.List;
 
 import nyc.c4q.workforce1.R;
 import nyc.c4q.workforce1.events_rv.Events_Adapter;
+import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Event;
 
 /**
@@ -38,6 +39,7 @@ public class EventsFragments extends Fragment {
         rootview = inflater.inflate(R.layout.fragment_events_fragments, container, false);
        // Events_Adapter events_adapter = new Events_Adapter();
         recyclerView = rootview.findViewById(R.id.recycler_view);
+        eventList = DummyData.eventList;
         Events_Adapter events_adapter = new Events_Adapter(eventList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(events_adapter);

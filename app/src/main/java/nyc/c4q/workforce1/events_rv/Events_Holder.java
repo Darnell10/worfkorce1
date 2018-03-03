@@ -48,8 +48,8 @@ public class Events_Holder extends RecyclerView.ViewHolder {
         Event thisEvent = event;
 
         borough.setText(thisEvent.getBorough());
-        checkin_to.setText((CharSequence) thisEvent.getCheckInTo());
-        checkin_from.setText((CharSequence) thisEvent.getCheckInFrom());
+        checkin_to.setText("july 27th");
+        checkin_from.setText("july 27th");
         eventTitle.setText(thisEvent.getEventTitle());
         location.setText(thisEvent.getLocation());
         address.setText(thisEvent.getLocationNameAndAddress());

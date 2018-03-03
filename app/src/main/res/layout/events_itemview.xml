@@ -1,76 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
- <android.support.v7.widget.CardView
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_gravity="center" >
-
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:orientation="horizontal">
-
-     <ImageView
-         android:id="@+id/job_image"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/borough"
-        android:text="20sp"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
-    <TextView
-        android:id="@+id/checkin_from"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/checkin_to"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/job_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                tools:src="@tools:sample/backgrounds/scenic"
+                android:visibility="gone"/>
 
-    <TextView
-        android:id="@+id/company_name"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/borough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test" />
 
-    <TextView
-        android:id="@+id/event_title"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/checkin_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"/>
 
-    <TextView
-        android:id="@+id/location"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/checkin_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"
+                />
 
-    <TextView
-        android:id="@+id/address"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"/>
 
-    <TextView
-        android:id="@+id/qualification"
-        android:text="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"/>
 
-     </LinearLayout>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"/>
 
- </android.support.v7.widget.CardView>
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"/>
+
+            <TextView
+                android:id="@+id/qualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                tools:text="test"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 
 </LinearLayout>
