@@ -42,12 +42,13 @@ public class Job {
     private Double wageMax;
     @SerializedName("wagemin")
     private Double wageMin;
+    private String borough;
 
     public boolean getBoroughBronx() {
         return yesNoToBoolean(boroughBronx);
     }
 
-    public boolean  getBoroughBrooklyn() {
+    public boolean getBoroughBrooklyn() {
         return yesNoToBoolean(boroughBrooklyn);
     }
 
@@ -112,26 +113,44 @@ public class Job {
     }
 
     public void setBoroughBronx(boolean boroughBronx) {
+        if(boroughBronx){
+            borough = Boroughs.BRONX.getBoroughName();
+        }
         this.boroughBronx = booleanToYesNo(boroughBronx);
     }
 
     public void setBoroughBrooklyn(boolean boroughBrooklyn) {
+        if(boroughBrooklyn){
+            borough = Boroughs.BROOKLYN.getBoroughName();
+        }
         this.boroughBrooklyn = booleanToYesNo(boroughBrooklyn);
     }
 
     public void setBoroughManhattan(boolean boroughManhattan) {
+        if(boroughManhattan){
+            borough = Boroughs.MANHATTAN.getBoroughName();
+        }
         this.boroughManhattan = booleanToYesNo(boroughManhattan);
     }
 
     public void setBoroughNonNyc(boolean boroughNonNyc) {
+        if(boroughNonNyc){
+            borough = Boroughs.NON_NYC.getBoroughName();
+        }
         this.boroughNonNyc = booleanToYesNo(boroughNonNyc);
     }
 
     public void setBoroughQueens(boolean boroughQueens) {
+        if(boroughQueens){
+            borough = Boroughs.QUEENS.getBoroughName();
+        }
         this.boroughQueens = booleanToYesNo(boroughQueens);
     }
 
     public void setBoroughStatenIsland(boolean boroughStatenIsland) {
+        if(boroughStatenIsland){
+            borough = Boroughs.STATEN_ISLAND.getBoroughName();
+        }
         this.boroughStatenIsland = booleanToYesNo(boroughStatenIsland);
     }
 
@@ -179,6 +198,10 @@ public class Job {
         this.wageMin = wageMin;
     }
 
+    public String getBorough() {
+        return borough;
+    }
+
     private boolean yesNoToBoolean(String s) {
         switch (s) {
             case "Yes":
@@ -190,9 +213,32 @@ public class Job {
     }
 
     private String booleanToYesNo(boolean b) {
-       if(b){
-           return "Yes";
-       }
-       return "No";
+        if (b) {
+            return "Yes";
+        }
+        return "No";
     }
+
+    private enum Boroughs {
+
+        BRONX("Bronx"),
+        MANHATTAN("Manhattan"),
+        BROOKLYN("Brooklyn"),
+        QUEENS("Queens"),
+        STATEN_ISLAND("Staten Island"),
+        NON_NYC("Non NYC");
+
+        private String boroughName;
+
+        private Boroughs(String s) {
+            boroughName = s;
+        }
+
+        public String getBoroughName() {
+            return boroughName;
+        }
+
+    }
+
+
 }
