@@ -1,15 +1,11 @@
-package nyc.c4q.workforce1.jobs_rv;
+package nyc.c4q.workforce1.jobs;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import nyc.c4q.workforce1.R;
 import nyc.c4q.workforce1.model.Job;
-import nyc.c4q.workforce1.model.Jobs;
 
 /**
  * Created by c4q on 3/3/18.

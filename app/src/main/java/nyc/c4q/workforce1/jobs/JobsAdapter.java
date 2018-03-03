@@ -1,4 +1,4 @@
-package nyc.c4q.workforce1.jobs_rv;
+package nyc.c4q.workforce1.jobs;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
