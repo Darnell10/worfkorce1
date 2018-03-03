@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import nyc.c4q.workforce1.R;
-import nyc.c4q.workforce1.events_rv.Events_Adapter;
+import nyc.c4q.workforce1.events_rv.EventsAdapter;
 import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Event;
 
@@ -37,10 +37,10 @@ public class EventsFragments extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootview = inflater.inflate(R.layout.fragment_events_fragments, container, false);
-       // Events_Adapter events_adapter = new Events_Adapter();
+       // EventsAdapter events_adapter = new EventsAdapter();
         recyclerView = rootview.findViewById(R.id.recycler_view);
         eventList = DummyData.eventList;
-        Events_Adapter events_adapter = new Events_Adapter(eventList);
+        EventsAdapter events_adapter = new EventsAdapter(eventList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(events_adapter);
         recyclerView.setLayoutManager(linearLayoutManager);

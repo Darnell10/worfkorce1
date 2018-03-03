@@ -18,7 +18,7 @@ import static nyc.c4q.workforce1.R.*;
  * Created by D on 3/3/18.
  */
 
-public class Events_Holder extends RecyclerView.ViewHolder {
+public class EventsHolder extends RecyclerView.ViewHolder {
 
     private ImageView imageView;
     private TextView borough;
@@ -28,9 +28,10 @@ public class Events_Holder extends RecyclerView.ViewHolder {
     private TextView location;
     private TextView address;
     private TextView qualifications;
+    private TextView eventDate;
 
 
-    public Events_Holder(View itemView) {
+    public EventsHolder(View itemView) {
         super(itemView);
 
         imageView = itemView.findViewById(id.job_image);
@@ -38,6 +39,7 @@ public class Events_Holder extends RecyclerView.ViewHolder {
         checkin_to = itemView.findViewById(id.checkin_to);
         checkin_from = itemView.findViewById(R.id.checkin_from);
         eventTitle = itemView.findViewById(R.id.event_title);
+
         location = itemView.findViewById(id.location);
         address = itemView.findViewById(id.address);
         qualifications = itemView.findViewById(id.qualification);
@@ -48,9 +50,10 @@ public class Events_Holder extends RecyclerView.ViewHolder {
         Event thisEvent = event;
 
         borough.setText(thisEvent.getBorough());
-        checkin_to.setText("july 27th");
-        checkin_from.setText("july 27th");
+        checkin_to.setText(Event.hourToString(event.getCheckInTo()));
+        checkin_from.setText(Event.hourToString(event.getCheckInFrom()));
         eventTitle.setText(thisEvent.getEventTitle());
+        eventDate.setText(Event.dateToString(event.getEventDate()));
         location.setText(thisEvent.getLocation());
         address.setText(thisEvent.getLocationNameAndAddress());
         qualifications.setText(thisEvent.getQualifications());
