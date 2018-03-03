@@ -198,6 +198,10 @@ public class Job {
         this.wageMin = wageMin;
     }
 
+    public String getBorough() {
+        return borough;
+    }
+
     private boolean yesNoToBoolean(String s) {
         switch (s) {
             case "Yes":
