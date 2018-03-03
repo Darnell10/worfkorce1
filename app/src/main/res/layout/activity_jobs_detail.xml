@@ -3,9 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="nyc.c4q.workforce1.fragments.JobsDetailFragment">
+    tools:context="nyc.c4q.workforce1.fragments.JobsDetailActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
