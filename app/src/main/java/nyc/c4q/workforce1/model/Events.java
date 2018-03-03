@@ -10,4 +10,11 @@ public class Events {
 
     List<Events> events;
 
+    public List<Events> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<Events> events) {
+        this.events = events;
+    }
 }

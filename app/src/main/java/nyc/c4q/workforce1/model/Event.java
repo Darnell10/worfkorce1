@@ -53,4 +53,40 @@ public class Event {
     public String getQualifications() {
         return qualifications;
     }
+
+    public void setBorough(String borough) {
+        this.borough = borough;
+    }
+
+    public void setCheckInFrom(Date checkInFrom) {
+        this.checkInFrom = checkInFrom;
+    }
+
+    public void setCheckInTo(Date checkInTo) {
+        this.checkInTo = checkInTo;
+    }
+
+    public void setCompanyNameOrType(String companyNameOrType) {
+        this.companyNameOrType = companyNameOrType;
+    }
+
+    public void setEventDate(Date eventDate) {
+        this.eventDate = eventDate;
+    }
+
+    public void setEventTitle(String eventTitle) {
+        this.eventTitle = eventTitle;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setLocationNameAndAddress(String locationNameAndAddress) {
+        this.locationNameAndAddress = locationNameAndAddress;
+    }
+
+    public void setQualifications(String qualifications) {
+        this.qualifications = qualifications;
+    }
 }
