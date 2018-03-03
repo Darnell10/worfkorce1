@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import nyc.c4q.workforce1.fragments.EventsFragments;
@@ -51,13 +50,13 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch(position){
+            switch (position) {
                 case 0:
                     EventsFragments eventsFragments = new EventsFragments();
                     return eventsFragments;
                 case 1:
                     JobsFragment jobsFragment = new JobsFragment();
-                    return  jobsFragment;
+                    return jobsFragment;
                 default:
                     return null;
             }
@@ -71,7 +70,7 @@ public class MainActivity extends FragmentActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             String title = "";
-            switch(position){
+            switch (position) {
                 case 0:
                     title = "Events";
                     break;
