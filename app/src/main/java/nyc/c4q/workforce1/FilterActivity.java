@@ -3,7 +3,18 @@ package nyc.c4q.workforce1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+
 import java.util.List;
+
 import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Event;
 import nyc.c4q.workforce1.model.Job;
@@ -39,8 +50,6 @@ public class FilterActivity extends AppCompatActivity {
                     filteredevents.add(event);
                 }
             }
-
         }
-
     }
 }

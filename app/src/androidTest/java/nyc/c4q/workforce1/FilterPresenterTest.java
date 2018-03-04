@@ -20,7 +20,6 @@ public class FilterPresenterTest {
     Job mockJob;
 
     @Mock
-
     FilterPresenter filterPresenter;
 
 

@@ -18,8 +18,8 @@ public class FilterPresenter {
     // a reference to your Lists. assume it has a method something like: database.addData(Data data)
     public static List<Job> jobList = DummyData.jobList;
     public static List<Event> eventList = DummyData.eventList;
-    public List<Job> filteredjobs;
-    public List<Event> filteredevents;
+    public static List<Job> filteredjobs;
+    public static List<Event> filteredevents;
 
     // a reference to your retrofit api or networking assemble. assume it has a method something like: api.getData()
     // private RetrofitService api;
@@ -29,7 +29,7 @@ public class FilterPresenter {
         this.eventList = eventList;
     }
 
-    public void filterData() {
+    public static void filterData() {
 
         FilterDummyData filterCriteria = new FilterDummyData();
 

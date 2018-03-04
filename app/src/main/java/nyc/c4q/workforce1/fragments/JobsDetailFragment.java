@@ -45,7 +45,7 @@ public class JobsDetailFragment extends Fragment {
         // Inflate the layout for this fragment
 
 
-        View rootView = inflater.inflate(R.layout.fragment_jobs_detail, container, false);
+        View rootView = inflater.inflate(R.layout.activity_jobs_detail, container, false);
         company = rootView.findViewById(R.id.job_company);
         title = rootView.findViewById(R.id.job_title);
         location = rootView.findViewById(R.id.job_location);
@@ -65,7 +65,7 @@ public class JobsDetailFragment extends Fragment {
         context = getActivity().getApplicationContext();
 
 
-        return inflater.inflate(R.layout.fragment_jobs_detail, container, false);
+        return inflater.inflate(R.layout.activity_jobs_detail, container, false);
     }
 
 }
