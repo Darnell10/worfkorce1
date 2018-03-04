@@ -20,12 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".FilterActivity"></activity>
-=======
+
         <activity android:name=".fragments.JobsDetailActivity"></activity>
         <activity android:name=".fragments.EventsDetailActivity"></activity>
->>>>>>> master
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
