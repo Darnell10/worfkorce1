@@ -13,7 +13,7 @@ public class DummyData {
 
     public static List<Event> eventList = populateEventList();
 
-    private static List<Job> populateJobList(){
+    public static List<Job> populateJobList(){
         List<Job> jobs = new ArrayList<>();
         for(int i =0 ;i < 100;i++) {
             Job dummyJob = new Job();
@@ -33,7 +33,7 @@ public class DummyData {
         return jobs;
     }
 
-    private static List<Event> populateEventList(){
+    public static List<Event> populateEventList(){
         List<Event> events = new ArrayList<>();
         for(int i = 0;i <100;i++){
             Event dummyEvent = new Event();
