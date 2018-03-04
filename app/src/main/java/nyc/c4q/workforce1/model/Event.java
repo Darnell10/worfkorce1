@@ -114,7 +114,7 @@ public class Event {
 
     private Date fromDateStringToDate(String s){
         //"Tuesday, February 27, 2018"
-        SimpleDateFormat format = new SimpleDateFormat("E, M d, y");
+        SimpleDateFormat format = new SimpleDateFormat("EEEEE, MMMMM dd, yyyy");
         Date date = null;
         try {
             date = format.parse(s);
@@ -132,7 +132,8 @@ public class Event {
     }
 
     public static String hourToString(Date date){
-        SimpleDateFormat formatter = new SimpleDateFormat("h:m a");        String sdt = formatter.format(date);
+        SimpleDateFormat formatter = new SimpleDateFormat("h:m a");
+        String sdt = formatter.format(date);
         return sdt;
 
     }

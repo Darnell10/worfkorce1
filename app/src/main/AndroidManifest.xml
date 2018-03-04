@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FilterActivity"></activity>
+        <activity android:name=".fragments.JobsDetailActivity"></activity>
+        <activity android:name=".fragments.EventsDetailActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
