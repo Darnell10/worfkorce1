@@ -30,7 +30,7 @@
             android:id="@+id/event_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/event"
+            android:text="Event"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
         <TextView
             android:id="@+id/company_Name"
@@ -45,7 +45,7 @@
             android:text="Date"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
         <TextView
-            android:id="@+id/borough"
+            android:id="@+id/job_borough"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Borough"/>

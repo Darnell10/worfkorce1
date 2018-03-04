@@ -1,20 +1,15 @@
 package nyc.c4q.workforce1.fragments;
 
-
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import nyc.c4q.workforce1.R;
 import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Job;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class JobsDetailActivity extends AppCompatActivity {
     TextView company, title, location, type, description, maxWage, minWage, maxHour, minHour, experience, requirement, rate;
     Button url;
