@@ -25,6 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".fragments.JobsDetailActivity"></activity>
+        <activity android:name=".fragments.EventsDetailActivity"></activity>
 
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBoIdWq3aJVziuArsmO0wv2H5kJTO7le6M" />
