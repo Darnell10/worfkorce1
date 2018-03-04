@@ -15,7 +15,7 @@ public class Event {
     private String borough;
     @SerializedName("check_in_from)")
     private String checkInFrom;
-    @SerializedName("check_in_from")
+    @SerializedName("check_in_to")
     private String  checkInTo;
     @SerializedName("company_name_or_type")
     private String companyNameOrType;
