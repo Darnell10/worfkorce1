@@ -1,6 +1,5 @@
 package nyc.c4q.workforce1;
 
-import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by C4Q on 3/3/18.

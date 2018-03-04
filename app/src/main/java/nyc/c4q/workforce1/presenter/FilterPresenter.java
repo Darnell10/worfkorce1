@@ -1,35 +1,35 @@
-package nyc.c4q.workforce1;
+package nyc.c4q.workforce1.presenter;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 
 import java.util.List;
 
+import nyc.c4q.workforce1.FilterDummyData;
 import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Event;
 import nyc.c4q.workforce1.model.Job;
 
-public class FilterActivity extends AppCompatActivity {
+/**
+ * Created by C4Q on 3/4/18.
+ */
 
+public class FilterPresenter {
+
+    // a reference to your Lists. assume it has a method something like: database.addData(Data data)
     public static List<Job> jobList = DummyData.jobList;
     public static List<Event> eventList = DummyData.eventList;
-    public List<Job> filteredjobs;
-    public List<Event> filteredevents;
+    public static List<Job> filteredjobs;
+    public static List<Event> filteredevents;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_filter);
+    // a reference to your retrofit api or networking assemble. assume it has a method something like: api.getData()
+    // private RetrofitService api;
+
+    public FilterPresenter(List<Job> jobList, List<Event> eventList) {
+        this.jobList = jobList;
+        this.eventList = eventList;
+    }
+
+    public static void filterData() {
 
         FilterDummyData filterCriteria = new FilterDummyData();
 
@@ -51,5 +51,7 @@ public class FilterActivity extends AppCompatActivity {
                 }
             }
         }
+
     }
+
 }
