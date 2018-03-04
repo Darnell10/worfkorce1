@@ -6,10 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Filterable;
-
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.fragments.JobsFragment;
 
@@ -28,6 +25,7 @@ public class MainActivity extends FragmentActivity {
         pager = findViewById(R.id.main_view_pager);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
+
     }
 
     @Override

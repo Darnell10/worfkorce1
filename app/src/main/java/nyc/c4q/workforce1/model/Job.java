@@ -202,7 +202,7 @@ public class Job {
         return borough;
     }
 
-    private boolean yesNoToBoolean(String s) {
+    public static boolean yesNoToBoolean(String s) {
         switch (s) {
             case "Yes":
                 return true;
@@ -212,7 +212,7 @@ public class Job {
         }
     }
 
-    private String booleanToYesNo(boolean b) {
+    public static String booleanToYesNo(boolean b) {
         if (b) {
             return "Yes";
         }

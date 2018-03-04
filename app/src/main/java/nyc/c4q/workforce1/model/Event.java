@@ -15,7 +15,7 @@ public class Event {
     private String borough;
     @SerializedName("check_in_from)")
     private String checkInFrom;
-    @SerializedName("check_in_from")
+    @SerializedName("check_in_to")
     private String  checkInTo;
     @SerializedName("company_name_or_type")
     private String companyNameOrType;
@@ -123,5 +123,17 @@ public class Event {
             e.printStackTrace();
         }
         return date;
+    }
+
+    private String dateToString(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("E, M d, y");
+        String sdt = formatter.format(date);
+        return sdt;
+    }
+
+    private String hourToString(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("h:m a");        String sdt = formatter.format(date);
+        return sdt;
+
     }
 }
