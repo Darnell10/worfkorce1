@@ -1,25 +1,23 @@
 package nyc.c4q.workforce1;
 
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
-
-import org.json.JSONException;
-
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.fragments.JobsFragment;
+<<<<<<< HEAD
 import nyc.c4q.workforce1.model.StaticJSON;
+=======
+
+>>>>>>> master
 
 public class MainActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 3;
     private ViewPager pager;
     private PagerAdapter pagerAdapter;
 
@@ -28,7 +26,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        pager = (ViewPager) findViewById(R.id.main_view_pager);
+        pager = findViewById(R.id.main_view_pager);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
 
@@ -60,6 +58,9 @@ public class MainActivity extends FragmentActivity {
                 case 1:
                     JobsFragment jobsFragment = new JobsFragment();
                     return jobsFragment;
+                case 2:
+                    MapFragment mapFragment = new MapFragment();
+                    return mapFragment;
                 default:
                     return null;
             }
@@ -80,10 +81,12 @@ public class MainActivity extends FragmentActivity {
                 case 1:
                     title = "Jobs";
                     break;
+                case 2:
+                    title = "Centers";
+                    break;
             }
             return title;
         }
     }
-
 
 }
