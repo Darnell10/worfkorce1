@@ -9,7 +9,11 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.fragments.JobsFragment;
+<<<<<<< HEAD
+import nyc.c4q.workforce1.model.StaticJSON;
+=======
 
+>>>>>>> master
 
 public class MainActivity extends FragmentActivity {
 
