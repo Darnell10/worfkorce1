@@ -63,6 +63,7 @@ public class JobsViewHolder extends RecyclerView.ViewHolder {
                 gotToDetail.putExtra("hoursMin",minH);
                 gotToDetail.putExtra("exp",exp);
                 gotToDetail.putExtra("req",req);
+
                 itemView.getContext().startActivity(gotToDetail);
 
             }
