@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nyc.c4q.workforce1.fragments.EventsDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/company_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        <TextView
+            android:id="@+id/event_company_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Company Name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+        <TextView
+            android:id="@+id/event_borough"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Borough"/>
+        <TextView
+            android:id="@+id/event_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"/>
+        <TextView
+            android:id="@+id/event_location_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"/>
+        <TextView
+            android:id="@+id/checkIn_From"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check In Time Start:"/>
+        <TextView
+            android:id="@+id/checkIn_To"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check In Till:"/>
+        <TextView
+            android:id="@+id/event_qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Qualifications"/>
+
+    </LinearLayout>
+
+</ScrollView>
