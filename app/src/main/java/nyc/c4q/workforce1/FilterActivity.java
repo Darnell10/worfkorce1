@@ -34,10 +34,8 @@ public class FilterActivity extends AppCompatActivity {
             Job job = jobList.get(i);
             Log.d("Position", "onCreate: " + job);
             if (job.getWageMin() >= filterCriteria.getWageMin()
-                    && job.getWageMax() < filterCriteria.getWageMax()) {
-                filteredjobs.add(job);
-            }
-            if (job.getPositionType().equals(filterCriteria.getPositionType())) {
+                    && job.getWageMax() < filterCriteria.getWageMax()
+                    && job.getPositionType() == filterCriteria.getPositionType()) {
                 filteredjobs.add(job);
             }
         }
