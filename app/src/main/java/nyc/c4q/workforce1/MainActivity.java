@@ -15,6 +15,7 @@ import org.json.JSONException;
 
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.fragments.JobsFragment;
+import nyc.c4q.workforce1.model.StaticEventJSON;
 import nyc.c4q.workforce1.model.StaticJSON;
 
 public class MainActivity extends FragmentActivity {
