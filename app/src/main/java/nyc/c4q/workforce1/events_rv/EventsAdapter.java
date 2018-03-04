@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import nyc.c4q.workforce1.R;
@@ -16,16 +17,16 @@ import nyc.c4q.workforce1.model.Event;
 
 public class EventsAdapter extends RecyclerView.Adapter<EventsHolder> {
 
-    List<Event> eventList;
+    List<Event> eventList = new ArrayList<>();
 
     public EventsAdapter(List<Event> eventList) {
+
         this.eventList = eventList;
     }
 
-
     @Override
     public EventsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View childview = LayoutInflater.from(parent.getContext()).inflate(R.layout.events_itemview,parent,false);
+        View childview = LayoutInflater.from(parent.getContext()).inflate(R.layout.events_itemview, parent, false);
         return new EventsHolder(childview);
     }
 

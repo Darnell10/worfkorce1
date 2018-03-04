@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 import java.util.Date;
 
 import nyc.c4q.workforce1.R;
+import nyc.c4q.workforce1.fragments.EventsDetailActivity;
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.model.Event;
 
@@ -36,7 +37,6 @@ public class EventsHolder extends RecyclerView.ViewHolder {
     private TextView address;
     private TextView qualifications;
     private TextView eventDate;
-
 
     public EventsHolder(View itemView) {
         super(itemView);
@@ -65,24 +65,21 @@ public class EventsHolder extends RecyclerView.ViewHolder {
         address.setText(thisEvent.getLocationNameAndAddress());
         qualifications.setText(thisEvent.getQualifications());
 
-
-//        itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent eventIntent = new Intent(itemView.getContext(),.class);
-//                eventIntent.putExtra("borough",event.getBorough());
-//                eventIntent.putExtra("to",event.getCheckInFrom());
-//                eventIntent.putExtra("from",event.getCheckInFrom());
-//                eventIntent.putExtra("title",event.getEventTitle());
-//                eventIntent.putExtra("date",event.getEventDate());
-//                eventIntent.putExtra("location",event.getLocation());
-//                eventIntent.putExtra("address",event.getLocationNameAndAddress());
-//                eventIntent.putExtra("qualifications",event.getQualifications());
-//            }
-//        });
-
-
-
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent eventIntent = new Intent(itemView.getContext(),EventsDetailActivity.class);
+                eventIntent.putExtra("borough", event.getBorough());
+                eventIntent.putExtra("to", event.getCheckInFrom());
+                eventIntent.putExtra("from", event.getCheckInFrom());
+                eventIntent.putExtra("title", event.getEventTitle());
+                eventIntent.putExtra("date", event.getEventDate());
+                eventIntent.putExtra("location", event.getLocation());
+                eventIntent.putExtra("address", event.getLocationNameAndAddress());
+                eventIntent.putExtra("qualifications", event.getQualifications());
+                itemView.getContext().startActivity(eventIntent);
+            }
+        });
 
     }
 }

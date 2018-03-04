@@ -25,7 +25,7 @@ import nyc.c4q.workforce1.model.StaticEventJSON;
  */
 public class EventsFragments extends Fragment {
 
-    private List<Event> eventList;
+    private List<Event> eventList = null;
     private RecyclerView recyclerView;
     private View rootview;
 
@@ -41,22 +41,21 @@ public class EventsFragments extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootview = inflater.inflate(R.layout.fragment_events_fragments, container, false);
-       // EventsAdapter events_adapter = new EventsAdapter();
         recyclerView = rootview.findViewById(R.id.recycler_view);
-
 
         try {
             eventList = StaticEventJSON.getListFromJSON();
+            Log.d("LISTSIZE",eventList.size()+"");
+            EventsAdapter events_adapter = new EventsAdapter(eventList);
+            events_adapter.notifyDataSetChanged();
+            recyclerView.setAdapter(events_adapter);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        EventsAdapter events_adapter = new EventsAdapter(eventList);
+
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(events_adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-
-
 
         return rootview;
     }
