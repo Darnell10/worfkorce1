@@ -4,10 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/worfkorce1.iml" filepath="$PROJECT_DIR$/worfkorce1.iml" />
-<<<<<<< HEAD
-=======
-      <module fileurl="file://C:\Users\Shant\Documents\AccessCode\Workforce1\worfkorce1.iml" filepath="C:\Users\Shant\Documents\AccessCode\Workforce1\worfkorce1.iml" />
->>>>>>> 45e9a8651a01319bd8a98a920a576876ffc5f320
     </modules>
   </component>
 </project>

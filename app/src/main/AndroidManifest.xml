@@ -2,16 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nyc.c4q.workforce1">
 
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-=======
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
->>>>>>> 45e9a8651a01319bd8a98a920a576876ffc5f320
 
     <application
         android:allowBackup="true"
@@ -20,12 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity android:name=".MainActivity">
-=======
-      <activity android:name=".FilterActivity"></activity>
-        <activity android:name=".splash.SplashScreen">
->>>>>>> 45e9a8651a01319bd8a98a920a576876ffc5f320
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,11 +25,7 @@
 =======
         <activity android:name=".fragments.JobsDetailActivity"></activity>
         <activity android:name=".fragments.EventsDetailActivity"></activity>
-<<<<<<< HEAD
 >>>>>>> master
-=======
-        <activity android:name=".MainActivity"></activity>
->>>>>>> 45e9a8651a01319bd8a98a920a576876ffc5f320
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
