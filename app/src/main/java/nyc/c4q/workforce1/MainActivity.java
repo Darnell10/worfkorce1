@@ -20,7 +20,7 @@ import nyc.c4q.workforce1.model.StaticJSON;
 
 public class MainActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 3;
     private ViewPager pager;
     private PagerAdapter pagerAdapter;
 
@@ -61,6 +61,9 @@ public class MainActivity extends FragmentActivity {
                 case 1:
                     JobsFragment jobsFragment = new JobsFragment();
                     return jobsFragment;
+                case 2:
+                    MapFragment mapFragment = new MapFragment();
+                    return mapFragment;
                 default:
                     return null;
             }
@@ -80,6 +83,9 @@ public class MainActivity extends FragmentActivity {
                     break;
                 case 1:
                     title = "Jobs";
+                    break;
+                case 2:
+                    title = "Centers";
                     break;
             }
             return title;
