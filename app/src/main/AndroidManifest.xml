@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
       <activity android:name=".FilterActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".splash.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +27,7 @@
         </activity>
         <activity android:name=".fragments.JobsDetailActivity"></activity>
         <activity android:name=".fragments.EventsDetailActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
 
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBoIdWq3aJVziuArsmO0wv2H5kJTO7le6M" />
