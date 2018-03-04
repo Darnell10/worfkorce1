@@ -9,12 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.json.JSONException;
+
 import java.util.List;
 
 import nyc.c4q.workforce1.R;
 import nyc.c4q.workforce1.jobs.JobsAdapter;
 import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Job;
+import nyc.c4q.workforce1.model.StaticJSON;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,7 +40,11 @@ public class JobsFragment extends Fragment {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_jobs, container, false);
         recyclerView = rootView.findViewById(R.id.jobs_recyclerview);
-        jobList = DummyData.jobList;
+        try {
+            jobList = StaticJSON.getListFromJSON();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         JobsAdapter jobsAdapter = new JobsAdapter(jobList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(jobsAdapter);
