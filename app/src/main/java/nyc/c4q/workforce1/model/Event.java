@@ -132,7 +132,8 @@ public class Event {
     }
 
     public static String hourToString(Date date){
-        SimpleDateFormat formatter = new SimpleDateFormat("h:m a");        String sdt = formatter.format(date);
+        SimpleDateFormat formatter = new SimpleDateFormat("h:m a");
+        String sdt = formatter.format(date);
         return sdt;
 
     }

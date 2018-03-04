@@ -1,6 +1,12 @@
 package nyc.c4q.workforce1.events_rv;
 
+import android.app.FragmentManager;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.telecom.Call;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,6 +16,7 @@ import org.w3c.dom.Text;
 import java.util.Date;
 
 import nyc.c4q.workforce1.R;
+import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.model.Event;
 
 import static nyc.c4q.workforce1.R.*;
@@ -46,8 +53,8 @@ public class EventsHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void onBind(Event event) {
-        Event thisEvent = event;
+    public void onBind(final Event event) {
+        final Event thisEvent = event;
 
         borough.setText(thisEvent.getBorough());
         checkin_to.setText(Event.hourToString(event.getCheckInTo()));
@@ -57,6 +64,24 @@ public class EventsHolder extends RecyclerView.ViewHolder {
         location.setText(thisEvent.getLocation());
         address.setText(thisEvent.getLocationNameAndAddress());
         qualifications.setText(thisEvent.getQualifications());
+
+
+//        itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent eventIntent = new Intent(itemView.getContext(),.class);
+//                eventIntent.putExtra("borough",event.getBorough());
+//                eventIntent.putExtra("to",event.getCheckInFrom());
+//                eventIntent.putExtra("from",event.getCheckInFrom());
+//                eventIntent.putExtra("title",event.getEventTitle());
+//                eventIntent.putExtra("date",event.getEventDate());
+//                eventIntent.putExtra("location",event.getLocation());
+//                eventIntent.putExtra("address",event.getLocationNameAndAddress());
+//                eventIntent.putExtra("qualifications",event.getQualifications());
+//            }
+//        });
+
+
 
 
     }

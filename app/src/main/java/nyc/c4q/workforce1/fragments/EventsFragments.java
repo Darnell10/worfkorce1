@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,10 +41,13 @@ public class EventsFragments extends Fragment {
        // EventsAdapter events_adapter = new EventsAdapter();
         recyclerView = rootview.findViewById(R.id.recycler_view);
         eventList = DummyData.eventList;
+        Event event = eventList.get(0);
+        Log.d("CHECKTIME",""+event.getCheckInFrom());
         EventsAdapter events_adapter = new EventsAdapter(eventList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(events_adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
+
 
 
         return rootview;
