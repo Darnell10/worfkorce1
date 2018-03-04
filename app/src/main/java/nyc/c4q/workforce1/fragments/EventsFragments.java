@@ -43,19 +43,15 @@ public class EventsFragments extends Fragment {
         rootview = inflater.inflate(R.layout.fragment_events_fragments, container, false);
        // EventsAdapter events_adapter = new EventsAdapter();
         recyclerView = rootview.findViewById(R.id.recycler_view);
-<<<<<<< HEAD
-        eventList = DummyData.eventList;
-        Event event = eventList.get(0);
-        Log.d("CHECKTIME",""+event.getCheckInFrom());
-        EventsAdapter events_adapter = new EventsAdapter(eventList);
-=======
+
+
         try {
             eventList = StaticEventJSON.getListFromJSON();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Events_Adapter events_adapter = new Events_Adapter(eventList);
->>>>>>> master
+        EventsAdapter events_adapter = new EventsAdapter(eventList);
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(events_adapter);
         recyclerView.setLayoutManager(linearLayoutManager);
