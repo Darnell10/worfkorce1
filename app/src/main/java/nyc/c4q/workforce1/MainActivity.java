@@ -15,6 +15,7 @@ import org.json.JSONException;
 
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.fragments.JobsFragment;
+import nyc.c4q.workforce1.model.StaticEventJSON;
 import nyc.c4q.workforce1.model.StaticJSON;
 
 public class MainActivity extends FragmentActivity {
@@ -31,6 +32,12 @@ public class MainActivity extends FragmentActivity {
         pager = (ViewPager) findViewById(R.id.main_view_pager);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
+
+        try {
+            Log.d("TESTJSON",""+ StaticEventJSON.getListFromJSON().get(0).getEventTitle());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 
