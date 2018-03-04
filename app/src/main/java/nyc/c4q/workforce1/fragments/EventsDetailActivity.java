@@ -27,7 +27,7 @@ public class EventsDetailActivity extends AppCompatActivity {
         companyName =findViewById(R.id.event_company_Name);
         eventDate =findViewById(R.id.event_date);
         eventTitle =findViewById(R.id.event_title);
-        location =findViewById(R.id.job_location);
+        location =findViewById(R.id.event_location);
         locationNameAndAddress =findViewById(R.id.event_location_address);
         qualifications =findViewById(R.id.event_qualification);
 
