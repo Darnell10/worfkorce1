@@ -39,16 +39,18 @@ public class JobsDetailActivity extends AppCompatActivity {
         requirement= findViewById(R.id.ed_requirements);
         rate= findViewById(R.id.rate);
 
-        title.setText(job.getPositionTitle());
-        location.setText(job.getBorough());
-        type.setText(job.getPositionType());
-        description.setText(job.getPositionDescritption());
-        maxWage.setText(job.getWageMax().toString());
-        minWage.setText(job.getWageMin().toString());
-        maxHour.setText(job.getMaxHoursPerWeek());
-        minHour.setText(job.getMinHoursPerWeek());
-        experience.setText(job.getCandidateExperienceQualificationSkills());
-        requirement.setText(job.getEducationRequired());
+        Bundle extras = getIntent().getExtras();
+
+        title.setText(extras.getString("title"));
+        location.setText(extras.getString("borough"));
+        type.setText(extras.getString("type"));
+        description.setText(extras.getString("desc"));
+        maxWage.setText(extras.getString("wageMax"));
+        minWage.setText(extras.getString("wageMin"));
+        maxHour.setText(extras.getString("hoursMax"));
+        minHour.setText(extras.getString("hoursMin"));
+        experience.setText(extras.getString("exp"));
+        requirement.setText(extras.getString("req"));
 
 
     }
