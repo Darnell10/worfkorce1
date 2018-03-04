@@ -33,12 +33,6 @@ public class MainActivity extends FragmentActivity {
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
 
-        try {
-            Log.d("TESTJSON",""+ StaticEventJSON.getListFromJSON().get(0).getEventTitle());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
     }
 
     @Override
