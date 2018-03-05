@@ -14,7 +14,14 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-      <activity android:name=".FilterActivity"></activity>
+
+
+        <service
+            android:name=".notificationJob.NotificationJob"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <activity android:name=".FilterActivity"></activity>
         <activity android:name=".splash.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FilterActivity"></activity>
 
         <activity android:name=".fragments.JobsDetailActivity"></activity>
         <activity android:name=".fragments.EventsDetailActivity"></activity>
