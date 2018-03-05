@@ -15,11 +15,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/comp_url"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/company_s_website" />
+            <!--<Button-->
+            <!--android:id="@+id/comp_url"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/company_s_website" />-->
             <ImageView
                 android:id="@+id/company_logo"
                 android:layout_width="match_parent"
@@ -28,18 +28,21 @@
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/job_company"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        <!--<TextView-->
+        <!--android:id="@+id/job_company"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Company"-->
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>-->
         <TextView
             android:id="@+id/job_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="Title"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            />
         <TextView
             android:id="@+id/job_type"
             android:layout_width="match_parent"
@@ -56,25 +59,50 @@
             android:layout_height="wrap_content"
             android:text="Hourly/Annual Rate"/>
         <TextView
+            android:text="Maximum Hours:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
             android:id="@+id/max_hours"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Max Hours Per week"/>
+        <TextView
+            android:text="Minimum Hours:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/min_hours"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Min Hours Per week"/>
         <TextView
+            android:text="Maximum Wage:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
             android:id="@+id/max_wage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Wage Max"/>
         <TextView
+            android:text="Minimum Hours:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
             android:id="@+id/min_wage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Wage Min"/>
+        <TextView
+            android:text="Qualifications:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/ed_requirements"
             android:layout_width="match_parent"
@@ -85,6 +113,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Candidate Experience"/>
+        <TextView
+            android:text="Job Description:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/job_description"
@@ -100,6 +133,12 @@
             android:id="@+id/apply_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Apply Now"/>
+            android:text="Apply Now"
+            android:onClick="indeed"
+            android:background="@drawable/button_states"/>
+        <!--android:bottomRightRadius="10dp"-->
+        <!--android:bottomLeftRadius="10dp"-->
+        <!--android:topLeftRadius="10dp"-->
+        <!--android:topRightRadius="10dp"/>-->
     </LinearLayout>
 </ScrollView>

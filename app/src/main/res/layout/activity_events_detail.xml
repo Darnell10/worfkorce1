@@ -27,28 +27,30 @@
 
 
         <TextView
+            android:textAlignment="center"
             android:id="@+id/event_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Event"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
         <TextView
-            android:id="@+id/event_company_Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Name"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
-        <TextView
             android:id="@+id/event_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Date"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+
+        <TextView
+            android:text="Location:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/event_borough"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Borough"/>
+
         <TextView
             android:id="@+id/event_location"
             android:layout_width="match_parent"
@@ -59,21 +61,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Address"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:text="Check In From:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/checkIn_From"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Check In Time Start:"/>
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/checkIn_To"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Check In Till:"/>
+            android:text="Qualifications:"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:id="@+id/event_qualification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Qualifications"/>
+
+        <FrameLayout
+            android:id="@+id/second_map_container"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+        </FrameLayout>
 
     </LinearLayout>
 

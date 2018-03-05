@@ -47,7 +47,7 @@ public class EventsHolder extends RecyclerView.ViewHolder {
         eventDate = itemView.findViewById(R.id.event_date);
         location = itemView.findViewById(R.id.location);
         address = itemView.findViewById(R.id.address);
-        qualifications = itemView.findViewById(R.id.qualification);
+        //qualifications = itemView.findViewById(R.id.qualification);
 
     }
 
@@ -61,7 +61,7 @@ public class EventsHolder extends RecyclerView.ViewHolder {
         eventDate.setText("Tuesday, March 14, 2018");
         location.setText(thisEvent.getLocation());
         address.setText(thisEvent.getLocationNameAndAddress());
-        qualifications.setText(thisEvent.getQualifications());
+        //qualifications.setText(thisEvent.getQualifications());
 
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override

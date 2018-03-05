@@ -7,8 +7,7 @@ import android.widget.TextView;
 import nyc.c4q.workforce1.R;
 import nyc.c4q.workforce1.model.DummyData;
 import nyc.c4q.workforce1.model.Event;
-
-
+import nyc.c4q.workforce1.splash.EventMapFragment;
 
 public class EventsDetailActivity extends AppCompatActivity {
     TextView borough, checkInFrom, checkInTo, eventDate, eventTitle,location,locationNameAndAddress,qualifications;
@@ -21,6 +20,9 @@ public class EventsDetailActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
 
+        EventMapFragment eventMapFragment = new EventMapFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.second_map_container,eventMapFragment).commit();
+
         borough= findViewById(R.id.event_borough);
         checkInFrom =findViewById(R.id.checkIn_From);
         checkInTo =findViewById(R.id.event_title);
@@ -32,7 +34,7 @@ public class EventsDetailActivity extends AppCompatActivity {
 
         borough.setText(bundle.getString("borough"));
         checkInFrom.setText(bundle.getString("from"));
-        checkInTo.setText(bundle.getString("to"));
+        checkInTo.setText("10:00 AM");
         eventDate.setText(bundle.getString("date"));
         eventTitle.setText(bundle.getString("title"));
         location.setText(bundle.getString("location"));
