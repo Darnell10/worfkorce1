@@ -2,6 +2,7 @@ package nyc.c4q.workforce1.fragments;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,7 +32,7 @@ public class JobsDetailActivity extends AppCompatActivity {
 
 
         company = findViewById(R.id.job_company);
-        title = findViewById(R.id.job_title);
+//        title = findViewById(R.id.job_title);
         location = findViewById(R.id.job_location);
         type = findViewById(R.id.job_type);
         description = findViewById(R.id.job_description);
@@ -48,7 +49,7 @@ public class JobsDetailActivity extends AppCompatActivity {
 
         extras = getIntent().getExtras();
 
-        title.setText(extras.getString("title"));
+//        title.setText(extras.getString("title"));
         location.setText(extras.getString("borough"));
         type.setText(extras.getString("type"));
         description.setText(extras.getString("desc"));
@@ -68,6 +69,7 @@ public class JobsDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 JobSQL db = JobSQL.getInstance(getApplicationContext());
                 db.addJob(extras);
+                Log.d("MESSAGE", "onClick: " + extras);
                 Toast.makeText(getBaseContext(), "Added to Saved Jobs", Toast.LENGTH_SHORT)
                         .show();
 

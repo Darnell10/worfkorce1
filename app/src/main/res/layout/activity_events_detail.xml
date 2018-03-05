@@ -1,80 +1,158 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="nyc.c4q.workforce1.fragments.EventsDetailActivity">
 
-
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:elevation="0dp"
+        card_view:cardCornerRadius="10dp">
 
 
-        <ImageView
-            android:id="@+id/company_logo"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"/>
+            android:orientation="vertical"
+            android:background="#0d7bc5"
+            android:padding="54dp">
 
-    </LinearLayout>
+
+            <TextView
+                android:id="@+id/event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:text="Event"
+                android:textColor="#FFFFFF"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
 
-        <TextView
-            android:id="@+id/event_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Event"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-        <TextView
-            android:id="@+id/event_company_Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Name"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
-        <TextView
-            android:id="@+id/event_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
-        <TextView
-            android:id="@+id/event_borough"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Borough"/>
-        <TextView
-            android:id="@+id/event_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Location"/>
-        <TextView
-            android:id="@+id/event_location_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Address"/>
-        <TextView
-            android:id="@+id/checkIn_From"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Check In Time Start:"/>
-        <TextView
-            android:id="@+id/checkIn_To"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Check In Till:"/>
-        <TextView
-            android:id="@+id/event_qualification"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Qualifications"/>
+            <TextView
+                android:id="@+id/event_company_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Company Name"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/event_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Date"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
-</ScrollView>
+            <TextView
+                android:id="@+id/event_borough"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Borough"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/event_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Location"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/event_location_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:text="Address"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/checkIn_From"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Check In Time Start:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/checkIn_To"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:text="Check In Till:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/event_qualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:text="Qualifications"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
