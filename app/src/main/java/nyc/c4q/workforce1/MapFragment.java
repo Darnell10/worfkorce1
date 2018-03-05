@@ -82,16 +82,13 @@ public class MapFragment extends Fragment {
                             if (location != null) {
                                 double lat = location.getLatitude();
                                 double lng = location.getLongitude();
-                                LatLng curr = new LatLng(lat,lng);
+                                LatLng curr = new LatLng(lat, lng);
                                 CameraPosition cameraPosition = new CameraPosition.Builder().target(curr).zoom(12).build();
-                                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-                                googleMap.addMarker(new MarkerOptions().position(new LatLng(lat,lng)).title("Current Location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher_round)));
+                                googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                                googleMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title("Current Location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.current)));
                             }
                         }
                     });
-
-                    Geocoder coder = new Geocoder(getActivity().getApplicationContext());
-                    LatLng p1 = null;
 
                     try
 
@@ -104,7 +101,11 @@ public class MapFragment extends Fragment {
                             Double lat = Double.parseDouble(obj.getString("lat"));
                             Double lng = Double.parseDouble(obj.getString("long"));
                             LatLng center = new LatLng(lat, lng);
-                            googleMap.addMarker(new MarkerOptions().position(center).title(title));
+                            googleMap.addMarker(new MarkerOptions()
+                                    .position(center)
+                                    .title(title)
+                                    .snippet(obj.getString("Hours"))
+                                    .icon(BitmapDescriptorFactory.fromResource(R.mipmap.center_icon)));
 
                         }
                     } catch (
@@ -114,11 +115,9 @@ public class MapFragment extends Fragment {
                         e.printStackTrace();
                     }
 
-                    // For zooming automatically to the location of the marker
-
-
                     UiSettings uiSettings = mMap.getUiSettings();
-                    uiSettings.setZoomControlsEnabled(true);
+                    uiSettings.setMapToolbarEnabled(true);
+                    uiSettings.setZoomControlsEnabled(false);
                     uiSettings.setMyLocationButtonEnabled(true);
                 }
             }
