@@ -37,9 +37,12 @@
         <TextView
             android:id="@+id/job_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="Title"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+           />
         <TextView
             android:id="@+id/job_type"
             android:layout_width="match_parent"
@@ -100,6 +103,12 @@
             android:id="@+id/apply_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Apply Now"/>
+            android:text="Apply Now"
+            android:onClick="indeed"
+            android:background="@drawable/button_states"/>
+            <!--android:bottomRightRadius="10dp"-->
+            <!--android:bottomLeftRadius="10dp"-->
+            <!--android:topLeftRadius="10dp"-->
+            <!--android:topRightRadius="10dp"/>-->
     </LinearLayout>
 </ScrollView>

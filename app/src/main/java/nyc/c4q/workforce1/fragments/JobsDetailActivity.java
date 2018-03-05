@@ -1,7 +1,10 @@
 package nyc.c4q.workforce1.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -55,4 +58,10 @@ public class JobsDetailActivity extends AppCompatActivity {
 
     }
 
+    public void indeed(View view) {
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.indeed.com/jobs?q=Food+Service+Team+Member&l=Staten+Island%2C+NY"));
+        startActivity(intent);
+
+    }
 }

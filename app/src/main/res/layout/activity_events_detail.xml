@@ -31,13 +31,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Event"
+            android:background="@color/colorPrimaryDark"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-        <TextView
-            android:id="@+id/event_company_Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Company Name"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>
+        <!--<TextView-->
+            <!--android:id="@+id/event_company_Name"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Company Name"-->
+            <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"/>-->
         <TextView
             android:id="@+id/event_date"
             android:layout_width="match_parent"
@@ -74,6 +75,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Qualifications"/>
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<com.google.android.gms.maps.MapView-->
+                <!--android:id="@+id/mapView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+
+        <!--</FrameLayout>-->
 
     </LinearLayout>
 
