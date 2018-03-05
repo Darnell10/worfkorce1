@@ -1,7 +1,10 @@
 package nyc.c4q.workforce1.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,12 +27,12 @@ public class JobsDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jobs_detail);
 
 
-        company =  findViewById(R.id.job_company);
+        //company =  findViewById(R.id.job_company);
         title = findViewById(R.id.job_title);
         location = findViewById(R.id.job_location);
         type = findViewById(R.id.job_type);
         description = findViewById(R.id.job_description);
-        url = findViewById(R.id.comp_url);
+        //url = findViewById(R.id.comp_url);
         logo = findViewById(R.id.company_logo);
         maxWage = findViewById(R.id.max_wage);
         minWage= findViewById(R.id.min_wage);
@@ -52,6 +55,13 @@ public class JobsDetailActivity extends AppCompatActivity {
         experience.setText(extras.getString("exp"));
         requirement.setText(extras.getString("req"));
 
+
+    }
+
+    public void indeed(View view) {
+
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.indeed.com/jobs?q=Food+Service+Team+Member&l=Staten+Island%2C+NY"));
+        startActivity(intent);
 
     }
 

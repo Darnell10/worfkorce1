@@ -5,29 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
     <android.support.v7.widget.CardView
         android:id="@+id/event_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        app:cardElevation="5dp"
+        android:padding="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
         android:layout_margin="6dp"
         android:elevation="2dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
+                android:padding="5dp"
                 android:id="@+id/event_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
-                android:textColor="#fff"
-                android:textSize="20sp"
-                tools:text="test" />
-
+                android:textSize="22sp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                tools:text="test"
+                android:elevation="8dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,105 +37,70 @@
                 android:orientation="vertical"
                 android:padding="5dp"
                 tools:ignore="Suspicious0dp">
-
                 <TextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date:"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
+                    android:textSize="20dp" />
                 <TextView
                     android:id="@+id/event_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     tools:text="text" />
-
                 <TextView
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Location:"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-
+                    android:textSize="20dp" />
                 <TextView
                     android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     tools:text="test" />
-
                 <TextView
                     android:id="@+id/address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     tools:text="test" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Check In From:"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:text="Check In: "
+                        android:textSize="20dp" />
                     <TextView
                         android:id="@+id/checkin_from"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         tools:text="test" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Check In To:"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/checkin_to"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        tools:text="test" />
-
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" - "
+                            android:textSize="20dp" />
+                        <TextView
+                            android:id="@+id/checkin_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            tools:text="test" />
+                    </LinearLayout>
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Qualifications:"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/qualification"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    tools:text="test" />
-
             </LinearLayout>
-
         </LinearLayout>
-
     </android.support.v7.widget.CardView>
-
-
 </LinearLayout>
