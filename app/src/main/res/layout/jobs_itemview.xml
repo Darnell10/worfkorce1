@@ -33,6 +33,8 @@
                     android:id="@+id/git_jobs_title_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="#fff"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                     tools:text="Title" />
 

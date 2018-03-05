@@ -22,7 +22,7 @@ import nyc.c4q.workforce1.model.DummyData;
  */
 public class JobsDetailFragment extends Fragment {
     TextView company, title, location, type, description, maxWage, minWage, maxHour, minHour, experience, requirement, rate;
-    Button url;
+   // Button url;
     ImageView logo;
     String job_id;
     String result;
@@ -46,12 +46,12 @@ public class JobsDetailFragment extends Fragment {
 
 
         View rootView = inflater.inflate(R.layout.activity_jobs_detail, container, false);
-        company = rootView.findViewById(R.id.job_company);
+       // company = rootView.findViewById(R.id.job_company);
         title = rootView.findViewById(R.id.job_title);
         location = rootView.findViewById(R.id.job_location);
         type = rootView.findViewById(R.id.job_type);
         description = rootView.findViewById(R.id.job_description);
-        url = rootView.findViewById(R.id.comp_url);
+     //   url = rootView.findViewById(R.id.comp_url);
         logo = rootView.findViewById(R.id.company_logo);
         maxWage = rootView.findViewById(R.id.max_wage);
         minWage= rootView.findViewById(R.id.min_wage);
