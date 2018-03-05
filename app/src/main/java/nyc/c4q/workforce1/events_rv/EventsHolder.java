@@ -41,8 +41,6 @@ public class EventsHolder extends RecyclerView.ViewHolder {
     public EventsHolder(View itemView) {
         super(itemView);
 
-        imageView = itemView.findViewById(id.job_image);
-        borough = itemView.findViewById(id.borough);
         checkin_to = itemView.findViewById(id.checkin_to);
         checkin_from = itemView.findViewById(R.id.checkin_from);
         eventTitle = itemView.findViewById(R.id.event_title);
@@ -56,11 +54,11 @@ public class EventsHolder extends RecyclerView.ViewHolder {
     public void onBind(final Event event) {
         final Event thisEvent = event;
 
-        borough.setText(thisEvent.getBorough());
-        checkin_to.setText(Event.hourToString(event.getCheckInTo()));
-        checkin_from.setText(Event.hourToString(event.getCheckInFrom()));
+        //borough.setText(thisEvent.getBorough());
+        checkin_to.setText("9:30 AM");
+        checkin_from.setText("9:00 AM");
         eventTitle.setText(thisEvent.getEventTitle());
-        eventDate.setText(Event.dateToString(event.getEventDate()));
+        eventDate.setText("Tuesday, March 14, 2018");
         location.setText(thisEvent.getLocation());
         address.setText(thisEvent.getLocationNameAndAddress());
         qualifications.setText(thisEvent.getQualifications());
@@ -70,10 +68,10 @@ public class EventsHolder extends RecyclerView.ViewHolder {
             public void onClick(View v) {
                 Intent eventIntent = new Intent(itemView.getContext(),EventsDetailActivity.class);
                 eventIntent.putExtra("borough", event.getBorough());
-                eventIntent.putExtra("to", event.getCheckInFrom());
-                eventIntent.putExtra("from", event.getCheckInFrom());
+                eventIntent.putExtra("to", "9:30 AM");
+                eventIntent.putExtra("from", "9:00 AM");
                 eventIntent.putExtra("title", event.getEventTitle());
-                eventIntent.putExtra("date", event.getEventDate());
+                eventIntent.putExtra("date", "Tuesday, March 14, 2018");
                 eventIntent.putExtra("location", event.getLocation());
                 eventIntent.putExtra("address", event.getLocationNameAndAddress());
                 eventIntent.putExtra("qualifications", event.getQualifications());
