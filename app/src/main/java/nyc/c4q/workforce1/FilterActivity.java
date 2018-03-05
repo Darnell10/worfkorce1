@@ -45,9 +45,11 @@ public class FilterActivity extends AppCompatActivity {
                 Log.d("JOBS: ", "onCreate: " + job);
                 if (job.getWageMin() >= filterCriteria.getWageMin()
                         && job.getWageMax() < filterCriteria.getWageMax()
-                        && job.getPositionType() == filterCriteria.getPositionType()) {
+                        && job.getPositionType().equals(filterCriteria.getPositionType())) {
                     filteredjobs.add(job);
                     filteredevents.add(event);
+                    //You have to get the value from the spinner. when you click in the item
+                    //you have to ensure that the items are being selected.
                 }
             }
         }

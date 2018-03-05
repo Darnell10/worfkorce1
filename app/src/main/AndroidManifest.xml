@@ -22,8 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FilterActivity"></activity>
-
         <activity android:name=".fragments.JobsDetailActivity"></activity>
         <activity android:name=".fragments.EventsDetailActivity"></activity>
         <activity android:name=".MainActivity"></activity>
