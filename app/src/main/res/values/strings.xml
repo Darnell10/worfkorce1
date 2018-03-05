@@ -8,4 +8,5 @@
     <string name="filter">Filter</string>
     <string name="location">What is my location?</string>
     <string name="full_time_part_time">Full Time / Part Time?</string>
+    <string name="save">Save</string>
 </resources>
