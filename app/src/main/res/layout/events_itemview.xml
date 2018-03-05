@@ -10,94 +10,126 @@
         android:id="@+id/event_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        android:elevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_weight="2"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                tools:ignore="Suspicious0dp"
-                android:padding="16dp">
-
-
-            <ImageView
-                android:id="@+id/job_image"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                tools:src="@tools:sample/backgrounds/scenic"
-                android:visibility="gone"/>
-
-            <TextView
-                android:id="@+id/borough"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test" />
-
-            <TextView
-                android:id="@+id/checkin_from"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test"/>
-
-            <TextView
-                android:id="@+id/checkin_to"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test"
-                />
-
-            <TextView
-                android:id="@+id/company_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test"/>
-
             <TextView
                 android:id="@+id/event_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
                 android:textSize="20sp"
-                tools:text="test"/>
+                tools:text="test" />
 
-            <TextView
-                android:id="@+id/event_date"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="text"/>
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:padding="5dp"
+                tools:ignore="Suspicious0dp">
 
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test"/>
+                <TextView
+                    android:id="@+id/event_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="text" />
 
-            <TextView
-                android:id="@+id/qualification"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                tools:text="test"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="test" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="test" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check In From:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/checkin_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        tools:text="test" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check In To:"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/checkin_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        tools:text="test" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Qualifications:"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/qualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="test" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
