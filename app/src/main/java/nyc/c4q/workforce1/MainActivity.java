@@ -1,5 +1,11 @@
 package nyc.c4q.workforce1;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
+import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
@@ -22,22 +28,30 @@ import android.widget.PopupWindow;
 
 import nyc.c4q.workforce1.fragments.EventsFragments;
 import nyc.c4q.workforce1.fragments.JobsFragment;
+import nyc.c4q.workforce1.notificationJob.NotificationJob;
 import static nyc.c4q.workforce1.presenter.FilterPresenter.filterData;
 
+
+@RequiresApi(api = Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
 
     private static final int NUM_PAGES = 3;
     private ViewPager pager;
     private PagerAdapter pagerAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String intentID = getIntent().getStringExtra("id");// id from intent for page adapter
+
         pager = findViewById(R.id.main_view_pager);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         pager.setAdapter(pagerAdapter);
+        scheduleJob(this);
+
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(pager);
@@ -150,5 +164,32 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public static void scheduleJob(Context context) {
+        /*
+          The ComponentName object is the component we are using. Components available in Android include BroadcastReceiver, ContentProvider, Activity, and Service. In our case we provide TestJobService as the second parameter to the ComponentName constructor because our TestJobService extends a JobService
+        */
+        ComponentName serviceComponent = new ComponentName(context, NotificationJob.class);
+
+
+        /*The JobInfo object allows you to define the criteria for the JobService. Specifying when the Job should be performed, what broadcasts to listen for to start the Job (i.e. device charging, connected to network, etc..) and other settings. the Job ID is used by the OS to ensure multiple instances of the same Jobs are not scheduled, this number is arbitrary and we can specify our own*/
+        JobInfo.Builder jobInfo = new JobInfo.Builder(0, serviceComponent);
+
+        /*Tell Android to wait a maximum of 3 seconds. Why? The entire point of the JobScheduler is to group together similar tasks then execute them simultaneously in order to save battery. Android will wait a set amount of time for other similar Jobs to be scheduled before beginning execution of those jobs. Example, multiple apps need to download some data, one app schedules a networking job, android will hold on to that job for a set amount of time to see if any other apps also request to use the network connection. We can tell Android to not wait more than x amount of time with the setOverrideDeadline. As the name implies, we are overriding the OS' default deadline */
+        jobInfo.setOverrideDeadline(1000*60);
+        jobInfo.setMinimumLatency(1000 * 5);
+
+
+        //get the JobScheduler service that will be scheduling our Jobs
+        JobScheduler jobScheduler = context.getSystemService(JobScheduler.class);
+
+        //build the job and schedule it if the jobScheduler is not null
+        if (jobScheduler != null) {
+            jobScheduler.schedule(jobInfo.build());
+        }
+
+    }
+
+
 
 }
