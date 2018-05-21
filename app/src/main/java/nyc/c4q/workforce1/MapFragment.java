@@ -24,10 +24,13 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 
 import java.io.IOException;
 import java.util.List;
@@ -58,6 +61,7 @@ public class MapFragment extends Fragment {
         mapView.onResume();
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
 
+
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
         } catch (Exception e) {
@@ -85,7 +89,13 @@ public class MapFragment extends Fragment {
                                 LatLng curr = new LatLng(lat, lng);
                                 CameraPosition cameraPosition = new CameraPosition.Builder().target(curr).zoom(12).build();
                                 googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-                                googleMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title("Current Location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.current)));
+                                int height = 100;
+                                int width = 100;
+                                BitmapDrawable bitmapdraw=(BitmapDrawable)getResources().getDrawable(R.drawable.icon);
+                                Bitmap b = bitmapdraw.getBitmap();
+                                Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
+                                BitmapDescriptor bitmap = BitmapDescriptorFactory.fromBitmap(smallMarker);
+                                googleMap.addMarker(new MarkerOptions().position(new LatLng(lat, lng)).title("Current Location").icon(bitmap));
                             }
                         }
                     });
@@ -93,6 +103,7 @@ public class MapFragment extends Fragment {
                     try
 
                     {
+
                         JSONArray arr = CenterLocations.getCenters();
                         for (int i = 0; i < arr.length(); i++) {
                             JSONObject obj = arr.getJSONObject(i);
@@ -101,11 +112,18 @@ public class MapFragment extends Fragment {
                             Double lat = Double.parseDouble(obj.getString("lat"));
                             Double lng = Double.parseDouble(obj.getString("long"));
                             LatLng center = new LatLng(lat, lng);
+                            int height = 100;
+                            int width = 100;
+                            BitmapDrawable bitmapdraw=(BitmapDrawable)getResources().getDrawable(R.drawable.icon);
+                            Bitmap b = bitmapdraw.getBitmap();
+                            Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
+                            BitmapDescriptor bitmap = BitmapDescriptorFactory.fromBitmap(smallMarker);
+
                             googleMap.addMarker(new MarkerOptions()
                                     .position(center)
                                     .title(title)
                                     .snippet(obj.getString("Hours"))
-                                    .icon(BitmapDescriptorFactory.fromResource(R.mipmap.center_icon)));
+                                    .icon(bitmap));
 
                         }
                     } catch (
